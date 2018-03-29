@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {Router, NavigationExtras} from "@angular/router";
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  public constructor(private router: Router) { }
+  
+  ngOnInit() {
+    this.router.navigate(["master"]);
+  }
 }
